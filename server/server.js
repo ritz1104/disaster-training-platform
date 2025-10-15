@@ -9,6 +9,7 @@ const compression = require('compression');
 const rateLimit = require('express-rate-limit');
 const morgan = require('morgan');
 require('dotenv').config();
+const path = require('path');
 
 const authRoutes = require('./routes/authRoutes');
 const trainingRoutes = require('./routes/trainingRoutes');
@@ -32,6 +33,8 @@ const io = socketIo(server, {
 // Security middleware
 app.use(helmet());
 app.use(compression());
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Rate limiting
 const limiter = rateLimit({
@@ -370,6 +373,10 @@ app.use('/api/*', (req, res) => {
     success: false,
     message: 'API endpoint not found'
   });
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Error handling middleware

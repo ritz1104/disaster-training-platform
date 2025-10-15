@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <style>
+      .icon-bg { fill: #1e3a5f; }
+      .icon-shield { fill: #87ceeb; }
+      .icon-text { fill: white; font-family: Arial, sans-serif; font-weight: bold; font-size: 8px; }
+    </style>
+  </defs>
+  <circle cx="16" cy="16" r="16" class="icon-bg"/>
+  <path d="M16 6 L10 9 L10 18 Q10 22 16 26 Q22 22 22 18 L22 9 Z" class="icon-shield"/>
+  <text x="16" y="27" text-anchor="middle" class="icon-text" font-size="6">NDMA</text>
+</svg>
