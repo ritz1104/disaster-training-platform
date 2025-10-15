@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .logo-circle { fill: #1e3a5f; }
+      .logo-inner-circle { fill: #ffffff; }
+      .logo-shield { fill: #87ceeb; }
+      .logo-hand { fill: #d2b48c; }
+      .logo-house { fill: #ff6b35; }
+      .logo-roof { fill: #1e3a5f; }
+      .logo-leaf { fill: #90ee90; }
+      .logo-water { fill: #4682b4; }
+      .logo-text { fill: #1e3a5f; font-family: Arial, sans-serif; font-weight: bold; }
+      .logo-compass { fill: #1e3a5f; }
+    </style>
+  </defs>
+  
+  <!-- Outer Circle -->
+  <circle cx="100" cy="100" r="95" class="logo-circle"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#ffffff" stroke-width="1"/>
+  
+  <!-- Inner Circle -->
+  <circle cx="100" cy="100" r="75" class="logo-inner-circle"/>
+  
+  <!-- Shield Background -->
+  <path d="M100 35 L75 50 L75 90 Q75 110 100 125 Q125 110 125 90 L125 50 Z" class="logo-shield"/>
+  
+  <!-- Compass -->
+  <g transform="translate(100, 55)">
+    <circle r="12" fill="none" stroke="#1e3a5f" stroke-width="1"/>
+    <path d="M0,-10 L3,0 L0,10 L-3,0 Z" class="logo-compass"/>
+    <text x="0" y="-15" text-anchor="middle" font-size="8" class="logo-text">N</text>
+    <text x="15" y="3" text-anchor="middle" font-size="6" class="logo-text">E</text>
+    <text x="0" y="23" text-anchor="middle" font-size="6" class="logo-text">S</text>
+    <text x="-15" y="3" text-anchor="middle" font-size="6" class="logo-text">W</text>
+  </g>
+  
+  <!-- Hand -->
+  <ellipse cx="100" cy="95" rx="20" ry="8" class="logo-hand"/>
+  <path d="M80 95 Q75 90 75 85 Q75 80 80 80 Q85 80 85 85" class="logo-hand"/>
+  
+  <!-- House on Hand -->
+  <g transform="translate(100, 85)">
+    <!-- House Base -->
+    <rect x="-8" y="-5" width="16" height="12" class="logo-house"/>
+    <!-- Roof -->
+    <path d="M-10,-5 L0,-12 L10,-5 Z" class="logo-roof"/>
+    <!-- Door -->
+    <rect x="-2" y="2" width="4" height="5" fill="#1e3a5f"/>
+    <!-- Window -->
+    <rect x="3" y="-2" width="3" height="3" fill="#87ceeb"/>
+  </g>
+  
+  <!-- Leaves -->
+  <ellipse cx="85" cy="82" rx="4" ry="2" class="logo-leaf" transform="rotate(-30 85 82)"/>
+  <ellipse cx="115" cy="82" rx="4" ry="2" class="logo-leaf" transform="rotate(30 115 82)"/>
+  
+  <!-- Water Waves -->
+  <path d="M75 105 Q85 100 95 105 T115 105 T135 105" fill="none" stroke="#4682b4" stroke-width="2"/>
+  <path d="M75 110 Q85 105 95 110 T115 110 T135 110" fill="none" stroke="#4682b4" stroke-width="2"/>
+  
+  <!-- Outer Text -->
+  <path id="top-curve" d="M 30 100 A 70 70 0 0 1 170 100" fill="none"/>
+  <text font-size="12" class="logo-text">
+    <textPath href="#top-curve" startOffset="5%">NATIONAL DISASTER MANAGEMENT ADMINISTRATION</textPath>
+  </text>
+  
+  <!-- NDMA Text -->
+  <text x="100" y="160" text-anchor="middle" font-size="24" class="logo-text">NDMA</text>
+  
+  <!-- Decorative Elements -->
+  <g transform="translate(40, 100)">
+    <circle r="3" class="logo-inner-circle"/>
+    <path d="M0,-2 L2,0 L0,2 L-2,0 Z" class="logo-compass"/>
+  </g>
+  <g transform="translate(160, 100)">
+    <circle r="3" class="logo-inner-circle"/>
+    <path d="M0,-2 L2,0 L0,2 L-2,0 Z" class="logo-compass"/>
+  </g>
+</svg>

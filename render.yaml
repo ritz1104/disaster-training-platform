@@ -1,0 +1,43 @@
+services:
+  # Backend API Service
+  - type: web
+    name: ndma-training-server
+    runtime: docker
+    dockerfilePath: ./server/Dockerfile
+    dockerContext: ./server
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        value: mongodb+srv://ritikrajput2611:IG1RxW6FFBXMGAJo@cluster0.dezkd.mongodb.net/ndma-training-monitor
+      - key: JWT_SECRET
+        value: 8a486ad7953cab835117af873d0f79a96bd48af6d85e86f92bd82ee2d8b04a5b
+      - key: JWT_EXPIRE
+        value: 24h
+      - key: PORT
+        value: 5000
+      - key: CLIENT_URL
+        fromService:
+          type: web
+          name: ndma-training-client
+          property: host
+
+  # Frontend Static Site
+  - type: web
+    name: ndma-training-client
+    runtime: static
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: ./client/dist
+    pullRequestPreviewsEnabled: false
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: ndma-training-server
+          property: host

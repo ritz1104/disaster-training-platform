@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NDMA Logo</title>
+    <style>
+        .logo-container {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            background: conic-gradient(from 0deg, #1e3a5f, #2c5f87, #1e3a5f);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .inner-circle {
+            width: 160px;
+            height: 160px;
+            background: white;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .shield {
+            width: 80px;
+            height: 90px;
+            background: linear-gradient(135deg, #87ceeb, #b0e0e6);
+            clip-path: polygon(50% 0%, 0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%);
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .ndma-text {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e3a5f;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="inner-circle">
+            <div class="shield"></div>
+            <div class="ndma-text">NDMA</div>
+        </div>
+    </div>
+</body>
+</html>
